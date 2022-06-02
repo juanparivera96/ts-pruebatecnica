@@ -1,0 +1,27 @@
+<div class="container">
+    <div class="class">
+        <div class="card-header">
+            <h3>Lista Empleados</h3>
+        </div>
+        <div class="card-body">
+            <table class="table table-over">
+                <thead>
+                    <tr class="text-center">
+                        <th>Id</th>
+                        <th>Nombre</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let employee of employees" class="text-center">
+                        <td>{{employee.id}}</td>
+                        <td>{{employee.name}}</td>
+                        <td>
+                            <button (click)="Editar(employee)" class="btn btn-secondary">Editar</button>
+                            <button (click)="Eliminar(employee)" class="btn btn-danger" style="margin-left: 10px;">Eliminar</button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

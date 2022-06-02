@@ -1,0 +1,17 @@
+<div class="container">
+    <div class="class">
+        <div class="card-header">
+            <h3>Creacion Empleado</h3>
+        </div>
+        <div class="card-body">
+            <form action="">
+                <div class="form-group">
+                    <label for="">Nombre</label>
+                    <input [(ngModel)]="employee.name" name="name" type="text" class="form-control">
+                </div>
+                <br>
+                <button (click)="GuardarEmpleado()" class="btn btn-success">Guardar</button>
+            </form>
+        </div>
+    </div>
+</div>

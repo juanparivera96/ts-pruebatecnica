@@ -1,0 +1,35 @@
+<div class="container">
+    <div class="class">
+        <div class="card-header">
+            <h3>Listar Actividades</h3>
+        </div>
+        <div class="card-body">
+            <table class="table table-over">
+                <thead>
+                    <tr class="text-center">
+                        <th>Id</th>
+                        <th>Descripcion</th>
+                        <th>Empleado Asignado</th>
+                        <th>Estatus</th>
+                        <th>Fecha Estimada</th>
+                        <th>Retraso</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let activity of activities" class="text-center">
+                        <td>{{activity.id}}</td>
+                        <td>{{activity.description}}</td>
+                        <td>{{activity.employee === null ? "Sin Asignar" :activity.employee.name}}</td>
+                        <td>{{activity.status}}</td>
+                        <td>{{activity.estimationDate}}</td>
+                        <td>{{activity.delay}}</td>
+                        <td>
+                            <button (click)="Editar(activity)" class="btn btn-secondary">Editar</button>
+                            <button (click)="Eliminar(activity)" class="btn btn-danger" style="margin-left: 10px;">Eliminar</button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
